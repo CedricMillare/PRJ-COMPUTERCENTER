@@ -140,3 +140,15 @@ body {
 .item img:hover {
   transform: scale(1.1);
 }
+
+.carousel-item {
+  text-align: center;
+  background: #fff;
+}
+
+.carousel-item img {
+  max-height: 350px;
+  width: auto;
+  margin: 0 auto;
+  object-fit: contain;
+}
