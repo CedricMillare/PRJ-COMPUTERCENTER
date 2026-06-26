@@ -1,10 +1,12 @@
 html,
 body {
   overflow-x: hidden;
+  padding-top: 40px;
 }
 :root {
   --bs-body-font-family: "Monospace" courier, monospace;
 }
+
 
 .html-border {
   border-color: orangered !important;
@@ -53,7 +55,7 @@ body {
 .profile-image {
   height: 400px;
   object-fit: cover;
-  border: 4px solid transparent;
+  border: none;
   transition: all 0.4s ease;
 }
 
@@ -142,13 +144,40 @@ body {
 }
 
 .carousel-item {
+  background: transparent !important;
   text-align: center;
   background: #fff;
+  transition: transform 0.6s ease;
+
 }
 
 .carousel-item img {
-  max-height: 350px;
-  width: auto;
-  margin: 0 auto;
-  object-fit: contain;
+  width: 100%;
+  height: 400px;        /* or 90vh if you want full hero */
+  object-fit: cover;    /* THIS removes corner gaps */
+  border-radius: 0 !important;
+  display: block;
+}
+
+#homeCarousel {
+  width: min(600px, 90vw);
+}
+
+.carousel-frame {
+  width: 100%;
+  height: 400px;              /* important: stops jumping */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+  border-radius: 18px;
+  background: #fff;
+  box-shadow: 0 12px 30px rgba(0,0,0,0.2);
+}
+
+.carousel-frame img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;          
+  border-radius: 18px;
 }
